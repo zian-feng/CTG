@@ -28,6 +28,8 @@ from imblearn.metrics import classification_report_imbalanced
 from skorch.callbacks import LRScheduler
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
+import joblib
+
 
 ## Data Wrangling  
 # **************************************************************************************
@@ -853,10 +855,9 @@ plt.tight_layout()
 plt.show()
 
 
-# exporting models and saving parameters
+# exporting models and saving parameters using joblib
 # use .pkl
 
-# import joblib
 # joblib.dump(SVM_final, 'svm.pkl')
 
 # torch.save(ANN_final.module_.state_dict(), 'ann_weights.pt')
